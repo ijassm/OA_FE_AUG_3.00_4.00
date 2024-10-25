@@ -1,0 +1,59 @@
+nav {
+  background-color: aliceblue;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 10px;
+
+    .logo {
+      max-width: 100px;
+    }
+
+    .routes {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-weight: 500;
+      cursor: pointer;
+
+      & *:hover {
+        color: $secondary;
+      }
+
+      .login-btn {
+        background-color: $secondary;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    }
+
+    .menu {
+      display: none;
+      background-color: $secondary;
+      color: white;
+      padding: 5px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: block;
+  }
+
+  .routes {
+    display: none;
+  }
+
+  .flex-item {
+    flex-basis: auto;
+  }
+}

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+nav {
+  background-color: aliceblue;
+}
+nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;
+}
+nav .navbar .logo {
+  max-width: 100px;
+}
+nav .navbar .routes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+nav .navbar .routes *:hover {
+  color: crimson;
+}
+nav .navbar .routes .login-btn {
+  background-color: crimson;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+nav .navbar .menu {
+  display: none;
+  background-color: crimson;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: block;
+  }
+  .routes {
+    display: none;
+  }
+  .flex-item {
+    flex-basis: auto;
+  }
+}
+* {
+  font-family: "Poppins", system-ui;
+}
+
+img {
+  width: 100%;
+}
+
+.max-width {
+  width: 95%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.blog {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-block: 50px;
+}
+.blog .flex-item {
+  flex-basis: calc(25% - 20px);
+}
+.blog .flex-item .content {
+  padding: 10px;
+}
+.blog .flex-item .content .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.blog .flex-item .content .description {
+  font-size: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog .flex-item .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: 10px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.654);
+  color: white;
+}
+.blog .flex-item .btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 900px) {
+  .flex-item {
+    flex-basis: calc(50% - 20px);
+  }
+}/*# sourceMappingURL=style.css.map */
