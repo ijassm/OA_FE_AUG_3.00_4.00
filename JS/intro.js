@@ -43,10 +43,10 @@ console.log(typeof `Hello`);
 
 // console.log(a, b);
 
-var name = "Sanjai";
-var age = 20;
-var voteEligibility = true;
+// var name = "Sanjai";
+// var age = 20;
+// var voteEligibility = true;
 
-console.log(`Name: ${name}`);
-console.log(`age: ${age}`);
-console.log(`voteEligibility: ${voteEligibility}`);
+// console.log(`Name: ${name}`);
+// console.log(`age: ${age}`);
+// console.log(`voteEligibility: ${voteEligibility}`);
