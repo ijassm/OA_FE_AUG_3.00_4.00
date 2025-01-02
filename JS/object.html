@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const obj = {
+      //     name: "John Doe",
+      //     age: 30,
+      //     city: "New York",
+      //     hobbies: ["reading", "painting", "swimming"],
+      //     address: {
+      //       street: "123 Main St",
+      //       city: "New York",
+      //       state: "NY",
+      //       zip: "10001",
+      //     },
+      //   };
+
+      //   console.log(obj);
+      //   console.log(typeof obj);
+
+      //   accessing object properties
+
+      //   console.log(obj.name);
+      //   console.log(obj.age);
+      //   console.log(obj.city);
+      //   console.log(obj.hobbies);
+      //   console.log(obj.address);
+
+      //   const student = {
+      //     firstName: "Sanjai",
+      //     lastName: "V",
+      //     age: 20,
+      //     skills: ["HTML", "CSS", "JS"],
+      //     educations: ["BA", "12th", "10th"],
+      //     courses: ["Diploma in Frontend"],
+      //     mobileNumber: "+91 9363690215",
+      //     address: {
+      //       doorNo: "4a",
+      //       street: "MGR street",
+      //       area: "Ariyankuppam",
+      //       city: "Puducherry",
+      //       state: "Puducherry",
+      //       country: "India",
+
+      //       pincode: 605007,
+      //     },
+      //   };
+
+      //   console.log(student.firstName + " " + student.lastName);
+
+      //   for (let i in student) {
+      //     console.log(student[i]);
+      //   }
+
+      const students = [
+        {
+          firstName: "Sanjai",
+          lastName: "V",
+          age: 20,
+          skills: ["HTML", "CSS", "JS"],
+          educations: ["BA", "12th", "10th"],
+          courses: ["Diploma in Frontend"],
+          mobileNumber: "+91 9363690215",
+          address: {
+            doorNo: "4a",
+            street: "MGR street",
+            area: "Ariyankuppam",
+            city: "Puducherry",
+            state: "Puducherry",
+            country: "India",
+
+            pincode: 605007,
+          },
+        },
+
+        {
+          firstName: "John",
+          lastName: "Doe",
+          age: 30,
+          skills: ["Python", "Django", "Machine Learning"],
+          educations: ["MBA", "B.Tech", "10th"],
+          courses: ["Data Science"],
+          mobileNumber: "+91 9876543210",
+          address: {
+            doorNo: "23",
+            street: "ABC street",
+            area: "XYZ Colony",
+            city: "New York",
+            state: "NY",
+            country: "USA",
+          },
+        },
+
+        {
+          firstName: "Jane",
+          lastName: "Smith",
+          age: 25,
+          skills: ["React", "Redux", "Node.js"],
+          educations: ["MCA", "B.Sc", "12th"],
+          courses: ["Software Engineering"],
+          mobileNumber: "+91 7890123456",
+          address: {
+            doorNo: "56",
+            street: "XYZ Avenue",
+            area: "PQR Township",
+            city: "Chennai",
+            state: "TN",
+            country: "India",
+          },
+        },
+      ];
+
+      //   console.log(students);
+
+      //   console.log(Array.prototype);
+
+      //   Array.prototype.test = "test";
+
+      for (let i of students) {
+        console.log(i.firstName + " " + i.lastName);
+      }
+    </script>
+  </body>
+</html>
