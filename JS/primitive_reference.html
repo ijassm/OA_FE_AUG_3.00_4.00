@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   Heap memory
+      //  |------------------------------|
+      //  | General Pool                 |
+      //  |      - object/array          |
+      //  | Intern Pool                  |
+      //  |      - string/symbol/boolean |
+      //  |------------------------------|
+
+      //   let a = "hello"; // #Memory 4556dfg
+      //   let b = "hello"; // #Memory 4556dfg
+
+      //   console.log(a); // #Memory 4556df
+
+      //   console.log(a == b);
+
+      //   let a = "hello";
+      //   let b = a;
+
+      //   a = "world";
+
+      //   console.log(a);
+      //   console.log(b);
+
+      const array = [1, 2, 3, 4];
+      const a = [...array];
+      const b = array;
+
+      b[0] = "hello";
+
+      console.log(array);
+      console.log(a);
+      console.log(b);
+
+      //   Stack memory
+      //  |------------------------------|
+      //  | Call Stack                   |
+      //  |      - function call         |
+      //  |------------------------------|
+      //  | Global Scope                |
+      //  |      - variable declaration |
+      //  |------------------------------|
+      //  | Local Scope                 |
+      //  |      - variable declaration |
+      //  |------------------------------|
+
+      //   function greet() {
+      //     let b = "world";
+      //     console.log(a + " " + b);
+      //   }
+      //   greet();
+
+      //   console.log(a); // hello
+
+      //   Garbage Collection
+      //   - Automatic memory deallocation
+      //   - JavaScript engine periodically checks for unreachable objects and frees up memory
+
+      //   Memory Leaks
+      //   - Memory leak occurs when an object reference is kept in a variable and is not properly cleared up when it is no longer needed
+    </script>
+  </body>
+</html>

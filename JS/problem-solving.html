@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const str = "sanjai";
+      const length = str.length;
+      let output = 0;
+
+      //   for (let i = 0; i < length; i++) {
+      //     for (let j = i + 1; j < length; j++) {
+      //       if (str[i] == str[j]) {
+      //         output = 1;
+      //         break;
+      //       }
+      //     }
+      //   }
+
+      //   console.log(str, output);
+
+      for (let i = 0; i < length; i++) {
+        if (str.slice(i + 1).includes(str[i])) {
+          output = 1;
+          break;
+        }
+      }
+
+      console.log(str, output);
+    </script>
+  </body>
+</html>
