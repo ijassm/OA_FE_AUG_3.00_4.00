@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>What is Closure?</h1>
+    <p>A function bundled with its lexical scope is Closure?</p>
+    <script>
+      //   function outerFunc() {
+      //     var a = 10;
+      //     return function innerFunc() {
+      //       console.log(a);
+      //     };
+      //   }
+
+      //   const func = outerFunc();
+
+      //   //   console.log(func);
+      //   func();
+
+      function func(count) {
+        return () => {
+          return {
+            increment: () => count++,
+            decrement: () => count--,
+            getCount: () => count,
+          };
+        };
+      }
+
+      const counter = func(0);
+
+      counter().increment();
+      counter().increment();
+      counter().increment();
+      counter().increment();
+      counter().increment();
+      counter().decrement();
+      console.log(counter().getCount());
+    </script>
+  </body>
+</html>
