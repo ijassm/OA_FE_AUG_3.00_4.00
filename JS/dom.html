@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h1 class="title">Hello</h1>
+    <h1 id="title">Hello</h1>
+    <input type="email" name="email" />
+    <script>
+      const doc = document;
+      const head = doc.head;
+      const body = doc.body;
+
+      //   console.log(head);
+      //   console.log(body);
+      //   console.log(body.h1); ❌
+
+      //   How to access HTML element ?
+      const h1 = doc.getElementsByTagName("h1")[1];
+      //   const h1 = doc.getElementsByClassName("title");
+      //   const h1 = doc.getElementById("title");
+      //   const h1 = doc.getElementsByName("email");
+
+      //   How to style HTML element ?
+      h1.style.color = "red";
+
+      //   How to change HTML element content ?
+      h1.textContent = "Hello HTML";
+
+      //   console.log(h1);
+
+      //   How to add new HTML element?
+      //   const newH1 = doc.createElement("h1");
+      //   newH1.textContent = "New Hello HTML";
+      //   body.appendChild(newH1);
+
+      //   console.log(newH1);
+
+      //   How to remove HTML element?
+      //   body.removeChild(h1);
+
+      //   How to create event listener?
+      h1.addEventListener("click", () => {
+        alert("Hello World!");
+      });
+    </script>
+  </body>
+</html>
