@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="count"></h1>
+    <button onclick="increment()">increment</button>
+    <button onclick="decrement()">decrement</button>
+    <script>
+      //   localStorage.setItem("count", 0);
+      document.querySelector("#count").textContent =
+        localStorage.getItem("count") || 0;
+
+      function decrement() {
+        const count =
+          localStorage.getItem("count") ||
+          document.querySelector("#count").textContent;
+        document.querySelector("#count").textContent = parseInt(count) - 1;
+        localStorage.setItem("count", parseInt(count) - 1);
+      }
+
+      function increment() {
+        const count =
+          localStorage.getItem("count") ||
+          document.querySelector("#count").textContent;
+        document.querySelector("#count").textContent = parseInt(count) + 1;
+        localStorage.setItem("count", parseInt(count) + 1);
+      }
+
+      //   const array = ["apple", "orange", "cherry", "kiwi", "lime"];
+
+      //   localStorage.setItem("array", JSON.stringify(array));
+
+      //   console.log(typeof localStorage.getItem("array"));
+      //   console.log(JSON.parse(localStorage.getItem("array")));
+
+      //   console.log(localStorage.key(2));
+
+      //   console.log(localStorage.length);
+
+      // localStorage.removeItem("array");
+
+      //   localStorage.clear();
+
+      //   sessionStorage.setItem("array", JSON.stringify(array));
+    </script>
+  </body>
+</html>
