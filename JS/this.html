@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const persons = [
+      //     {
+      //       fName: "Max",
+      //       lName: "Mustermann",
+      //       getFullName: function () {
+      //         return this.fName + " " + this.lName;
+      //       },
+      //     },
+      //     {
+      //       fName: "Erika",
+      //       lName: "Musterfrau",
+      //       getFullName: function () {
+      //         return this.fName + " " + this.lName;
+      //       },
+      //     },
+      //     {
+      //       fName: "Maximilian",
+      //       lName: "Muster",
+      //       getFullName: function () {
+      //         return this.fName + " " + this.lName;
+      //       },
+      //     },
+      //     {
+      //       fName: "Erik",
+      //       lName: "Mustermann",
+      //       getFullName: function () {
+      //         return this.fName + " " + this.lName;
+      //       },
+      //     },
+      //     {
+      //       fName: "Maxi",
+      //       lName: "Musterfrau",
+      //       getFullName: function () {
+      //         return this.fName + " " + this.lName;
+      //       },
+      //     },
+      //     {
+      //       fName: "Erik",
+      //       lName: "Muster",
+      //       getFullName: function () {
+      //         return this.fName + " " + this.lName;
+      //       },
+      //     },
+      //   ];
+
+      //   console.log(persons[0].getFullName());
+      //   console.log(persons[1].getFullName());
+      //   console.log(persons[2].getFullName());
+      //   console.log(persons[3].getFullName());
+      //   console.log(persons[4].getFullName());
+      //   console.log(persons[5].getFullName());
+
+      const persons = [
+        {
+          fName: "Max",
+          lName: "Mustermann",
+        },
+        {
+          fName: "Erika",
+          lName: "Musterfrau",
+        },
+        {
+          fName: "Maximilian",
+          lName: "Muster",
+        },
+        {
+          fName: "Erik",
+          lName: "Mustermann",
+        },
+        {
+          fName: "Maxi",
+          lName: "Musterfrau",
+        },
+        {
+          fName: "Erik",
+          lName: "Muster",
+        },
+      ];
+
+      function getFullName(lastName) {
+        // console.log(this);
+        return this.fName + " " + this.lName + " " + lastName;
+      }
+
+      //   console.log(getFullName());
+      //   console.log(getFullName());
+      //   console.log(getFullName());
+      //   console.log(getFullName());
+      //   console.log(getFullName());
+
+      //   console.log(getFullName.call(persons[0]));
+      //   console.log(getFullName.call(persons[1]));
+      //   console.log(getFullName.call(persons[2]));
+      //   console.log(getFullName.call(persons[3]));
+      //   console.log(getFullName.call(persons[4]));
+
+      //   for (let i of persons) {
+      //     console.log(getFullName.call(i, "Mustermann"));
+      //   }
+
+      //   for (let i of persons) {
+      //     console.log(getFullName.apply(i, ["Mustermann"]));
+      //   }
+
+      const getFullNameFunc = getFullName.bind(persons[4], "Mustermann");
+
+      console.log(getFullNameFunc());
+    </script>
+  </body>
+</html>

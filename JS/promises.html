@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const willAttend = true;
+      //   const tommorrowClass = new Promise((resolve, reject) => {
+      //     if (willAttend) {
+      //       setTimeout(() => {
+      //         resolve("I will attend the class😀");
+      //       }, 2000);
+      //     } else {
+      //       setTimeout(() => {
+      //         reject("Sorry, i will not able to attend the class😁");
+      //       }, 2000);
+      //     }
+      //   });
+
+      //   console.log(tommorrowClass);
+
+      //   tommorrowClass.then(
+      //     (data) => {
+      //       console.log(data);
+      //     },
+      //     (data) => {
+      //       console.error(data);
+      //     }
+      //   );
+
+      //   tommorrowClass
+      //     .then((data) => {
+      //       console.log(data);
+      //     })
+      //     .catch((data) => {
+      //       console.error(data);
+      //     });
+
+      //   tommorrowClass
+      //     .then((data) => {
+      //       console.log(data);
+      //       const isComplete = false;
+      //       return new Promise((resolve, reject) => {
+      //         if (isComplete) {
+      //           setTimeout(() => {
+      //             resolve("Going to complete JS😀");
+      //           }, 2000);
+      //         } else {
+      //           setTimeout(() => {
+      //             reject("Sorry, i will not able to complete JS😁");
+      //           }, 2000);
+      //         }
+      //       });
+      //     })
+      //     .then((data) => {
+      //       console.log(data);
+      //     })
+      //     .catch((data) => {
+      //       console.error(data);
+      //     });
+
+      //   async function isComplete() {
+      //     try {
+      //       const data = await tommorrowClass;
+      //       console.log(data);
+      //       const isComplete = true;
+      //       return new Promise((resolve, reject) => {
+      //         if (isComplete) {
+      //           setTimeout(() => {
+      //             resolve("Going to complete JS😀");
+      //           }, 2000);
+      //         } else {
+      //           setTimeout(() => {
+      //             reject("Sorry, i will not able to complete JS😁");
+      //           }, 2000);
+      //         }
+      //       });
+      //     } catch (error) {
+      //       console.error(error);
+      //     }
+      //   }
+
+      //   isComplete().then((data) => {
+      //     console.log(data);
+      //   });
+
+      //   ❌❌❌❌
+      //   async function tommorrowClass(willAttend = false) {
+      //     if (willAttend) {
+      //       setTimeout(() => {
+      //         return Promise.resolve("I will attend the class😀");
+      //       }, 2000);
+      //     } else {
+      //       setTimeout(() => {
+      //         return Promise.reject(
+      //           "Sorry, i will not able to attend the class😁"
+      //         );
+      //       }, 2000);
+      //     }
+      //   }
+
+      //  ✅✅✅✅
+      const tommorrowClass = (willAttend = false) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (willAttend) {
+              resolve("I will attend the class 😀");
+            } else {
+              reject("Sorry, I will not be able to attend the class 😁");
+            }
+          }, 2000);
+        });
+      }
+
+      async function main() {
+        try {
+          const tommorrowClassPromise = await tommorrowClass(true);
+          console.log(tommorrowClassPromise);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      main(); // this task takes 2 seconds to complete
+
+      console.log("Called from global scope");
+    </script>
+  </body>
+</html>
